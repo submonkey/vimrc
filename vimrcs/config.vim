@@ -74,7 +74,7 @@ set splitbelow
 set splitright
 
 if has("gui_running")
-  set gfn=Menlo\ for\ Powerline:h13
+  set gfn=Inconsolata\ for\ Powerline:h13
   set guioptions-=T
   set guioptions-=e
   set guioptions-=r

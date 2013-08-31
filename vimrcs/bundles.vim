@@ -122,8 +122,8 @@ let g:lightline = {
   \   'fileencoding': 'MyFileencoding',
   \   'mode': 'MyMode',
   \ },
-  \ 'separator': { 'left': '⮀', 'right': '⮂' },
-  \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+  \ 'separator': { 'left': '', 'right': '' },
+  \ 'subseparator': { 'left': '', 'right': '' }
   \ }
 
 function! MyModified()
@@ -144,7 +144,7 @@ function! MyFilename()
 endfunction
 
 function! MyFugitive()
-  return &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head') && strlen(fugitive#head()) ? '⭠ '.fugitive#head() : ''
+  return &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head') && strlen(fugitive#head()) ? ' '.fugitive#head() : ''
 endfunction
 
 function! MyFileformat()
