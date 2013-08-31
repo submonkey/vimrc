@@ -1,0 +1,41 @@
+extends html
+
+snippet cl "Class declaration template" !b
+/**
+ * Class ${1:`!p snip.rv=snip.fn.capitalize().split('.')[0]`} 
+ * @author $2
+ */
+class $1 {
+    public function ${3:__construct}(${4:$options}) {
+        ${5:// code}
+    }
+}
+$0
+endsnippet
+
+snippet cle "Class with extends declaration template" !b
+/**
+ * Class ${1:`!p snip.rv=snip.fn.capitalize().split('.')[0]`} 
+ * @author $2
+ */
+class $1 extends ${3:$parrent} {
+    public function ${4:__construct}(${5:$options}) {
+        ${6:// code}
+    }
+}
+$0
+endsnippet
+
+# CI snippets
+
+snippet load_model "CI load model snippet"
+$this->load->model('${1:$model}');$0
+endsnippet
+
+snippet load_view "CI view snippets"
+$this->load->view('${1:$view}');$0
+endsnippet
+
+snippet load_viewdata "CI view snippets"
+$this->load->view('${1:$view}', $data);$0
+endsnippet
